@@ -1,0 +1,638 @@
+:root{
+	--pink:#e84393;
+}
+
+*{
+	margin: 0; padding: 0;
+	box-sizing:  border-box: ;
+	font-family: 'Baloo 2', serif;
+	outline: none; border: none;
+	text-decoration: : none;
+	transition: .2s linear;
+}
+
+html{
+	font-size: 62.5%;
+	scroll-behavior: : smooth;
+	scroll-padding-top:  6rem;
+	overflow-x: hidden;
+}
+
+section{
+	padding: 2rem 9%;
+}
+
+.heading{
+	text-align: center;
+	font-size: 4rem;
+	color: white;
+	padding: 1rem;
+	margin:2rem 0;
+	background: rgba(255, 51, 153, .25);
+	margin-top: 10rem;
+}
+
+
+.order-btn{
+	display: inline-block;
+	/*margin-top: 1rem;*/
+	border-radius: 5rem;
+	background: var(--pink);
+	color: white;
+	padding: .9rem 3.5rem;
+	cursor: pointer;
+	font-size: 1.7rem;
+	text-decoration: none;
+}
+
+.order-btn:hover{
+	text-decoration: underline;
+}
+
+header{
+	position: fixed;
+	top: 0; left: 0; right: 0;
+	/*background: #D1EFFF;*/
+	background: rgba(204, 204, 204, 0.5);
+	padding: 2rem 9%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 1000;
+	/*border-bottom: 3px solid white;
+  	border-radius: 3px;*/
+}
+
+header .navbar a{
+	font-size: 2rem;
+	padding: 0 1.5rem;
+	color: white;
+}
+
+header .navbar a:hover{
+	color:var(--pink);
+}
+
+header .logo{
+	width: 7%;
+	height: 7%;
+
+}
+header .logo-name {
+	font-family: 'Lilita One', serif;
+	font-size: 4rem;
+	color: darksalmon;
+	margin-right: 18rem;
+	text-decoration: none;
+
+}
+header .logo-name:hover{
+	text-decoration: underline;
+}
+
+header .collapse{
+	margin-right: 22rem;
+}
+
+header .icons a{
+	font-size: 2rem;
+	color: white;
+	padding: 0.5rem;
+	
+}
+
+header .dropdown-menu{
+	background: rgba(204, 204, 204, 0.25);
+}
+
+header .icons a:hover{
+	color: \var(--pink);
+}
+
+header .form-control{
+	font-size: 1.5rem;
+}
+
+header .btn{
+	font-size: 1.5rem;
+}
+
+.btn-buy {
+  display: inline-block;
+  border-radius: 5rem;
+  background: var(--pink);
+  color: white;
+  padding: .9rem 3.5rem;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-decoration: none;
+}
+.btn-buy:hover {
+  text-decoration: underline;
+}
+
+
+.home{
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+	background-image: url(https://upload-os-bbs.hoyolab.com/upload/2020/10/29/7964533/cf59c66f8387b5f02025b8c0e49b1483_6205926956243229094.gif?x-oss-process=image/resize,s_1000/quality,q_80/auto-orient,0/interlace,1/format,gif);
+	background-repeat: repeat;
+	background-size: cover;
+	background-position: left;
+}
+
+
+.home .content{
+	max-width: 35rem;
+	background: rgba(204, 204, 204, 0.25);
+	padding: .9rem 3.5rem;
+	margin-left: 4rem;
+	margin-top: 10rem;
+}
+
+.home .content h3{
+	font-size: 6rem;
+	color: white;
+}
+
+.home .content span{
+	font-size: 2.5rem;
+	color: salmon;
+	padding: 1rem 0;
+	line-height: 1.5;
+}
+
+.home .content p{
+	font-size: 1.5rem;
+	color: #B7B7B7;
+	padding: 1rem 0;
+	line-height: 1.5;
+}
+
+.about{
+	
+	min-height: 100vh;
+	background-image: url(https://steamuserimages-a.akamaihd.net/ugc/1673610360172299846/2269C044B3AF80DE9EC76F7F73EDBC0A2653B5B1/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true);
+	background-size: cover;
+}
+
+.about .row{
+	display: flex;
+	align-items: center;
+	gap:2rem;
+	flex-wrap: wrap;
+	padding:2rem 0;
+	padding-bottom:3rem ;
+}
+
+.about .row .video-container{
+	flex:1 1 40rem;
+	position: relative;
+}
+
+.about .row .video-container img{
+	width:100%;
+	border: 1.5rem solid white;
+	border-radius: .5rem;
+	box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+	height: 100%;
+	object-fit: cover;
+}
+
+.about .row .content h3{ 
+	font-size: 3rem;
+	color: white;
+}
+
+.about .row .content p{ 
+	font-size: 1.75rem;
+	color: black;
+	padding: .9rem 3.5rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	line-height: 1.5 ;
+	background: white;
+
+}
+ 
+.about .row .content{
+	flex: 1 1 40rem;
+}
+
+.product-img{
+	width: 100%;
+	height: 200px;
+	object-fit: contain;
+}
+
+.food{
+	background-image: url(https://preview.redd.it/df7c0ft9vih71.jpg?width=932&format=pjpg&auto=webp&v=enabled&s=07300e0b0a160e6a9f554f7ffac02d1636cfb13d);
+	background-repeat: repeat;
+}
+
+.food .mondstadt .row{
+	display: flex;
+	gap:2rem;
+	flex-wrap: wrap;
+	padding-bottom:3rem ;
+}
+
+.food .mondstadt .row h5{
+	font-size: 2rem;
+	color:var(--pink);
+}
+
+.food .mondstadt .row .card-text{
+	font-size: 1.25rem;
+}
+
+
+.food .liyue .row{
+	display: flex;
+	gap:2rem;
+	flex-wrap: wrap;
+	padding-bottom:3rem ;
+}
+
+.food .liyue .row h5{
+	font-size: 2rem;
+	color:var(--pink);
+}
+
+.food .liyue .row .card-text{
+	font-size: 1.25rem;
+}
+
+.food .inazuma .row{
+	display: flex;
+	gap:2rem;
+	flex-wrap: wrap;
+	padding-bottom:3rem ;
+}
+
+.food .inazuma .row h5{
+	font-size: 2rem;
+	color:var(--pink);
+}
+
+.food .inazuma .row .card-text{
+	font-size: 1.25rem;
+}
+
+.food .sumeru .row{
+	display: flex;
+	gap:2rem;
+	flex-wrap: wrap;
+	padding-bottom:3rem ;
+}
+
+.food .sumeru .row h5{
+	font-size: 2rem;
+	color:var(--pink);
+}
+
+.food .sumeru .row .card-text{
+	font-size: 1.25rem;
+}
+
+.add-cart{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: var(--pink);
+	color: white;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 5rem;
+	margin-bottom: 0.5rem;
+	margin-right: 1rem;
+	text-decoration: none;
+}
+
+.add-cart:hover{
+	text-decoration: underline;
+}
+
+.price{
+	font-size: 1.5rem;
+	color: var(--pink);
+	margin-left: 1rem;
+}
+
+.mora{
+	height: 100%;
+	width: 10%;
+	object-fit: contain;
+}
+
+.contact{
+	background: #e4f3f8;
+}
+
+.contact .row{
+	display: flex;
+	flex-wrap: wrap;
+	gap:  1.5rem;
+
+
+}
+
+.contact .row form{
+	flex:  1 1 40rem;
+	padding: 2rem 2.5rem;
+	box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+	border:  .1rem solid rgba(0, 0, 0, .1);
+	background: white;
+	border-radius: .5rem;
+}
+
+.contact .row .image{
+	flex: 1 1 40rem;
+}
+
+.contact .row .image img{
+	width: 100%;
+}
+
+.contact .row form .box{
+	padding: 1rem;
+	font-size: 1.7rem;
+	color: #333;
+	text-transform: none;
+	border: .1rem solid rgba(0, 0, 0, .1);
+	border-radius: .5rem ;
+	margin:  .7rem 0;
+	width: 100%;
+}
+
+.contact .row form .box:focus{
+	border-color: var(--pink);
+}
+
+.contact .row form textarea{
+	height: 25rem;
+	resize: none;
+}
+
+.contact .row form .btn{
+	display: inline-block;
+	/*margin-top: 1rem;*/
+	border-radius: 5rem;
+	background: var(--pink);
+	color: white;
+	padding: .9rem 3.5rem;
+	cursor: pointer;
+	font-size: 1.7rem;
+	text-decoration: none;
+}
+
+.contact .row form .btn:hover{
+	text-decoration: underline;
+}
+
+.footer{
+	background: #e4f3f8;
+}
+
+.footer .credit{
+	text-align: center;
+	padding: 1.5rem;
+	margin-top: 1.5rem;
+	padding-top: 2.5rem;
+	font-size: 2rem;
+	color: #333;
+	border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+
+
+/* media queries */
+@media (max-width: 800px){
+	html{
+		font-size: 55%;
+	}
+	header{
+		padding: 2rem;
+	}
+}
+
+/*--------------------------------check out ------------------------*/
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+.close {
+  text-align: left;
+}
+.close:hover {
+  cursor:pointer;
+}
+.payment-btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+  margin-bottom: 20rem;
+
+}
+
+.payment-btn:hover {
+  background-color: #45a049;
+}
+
+/* ------------------------------Cart --------------------------------------*/
+.cart {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 360px;
+  height: 100vh;
+  padding: 20px;
+  background: white;
+  box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+  transition: 0.3s;
+  overflow-y: scroll;
+  
+}
+.cart.active {
+  right: 0;
+}
+
+.cart-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+.cart-box {
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.cart-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  padding: 10px;
+}
+.detail-box {
+  display: grid;
+  row-gap: 0.5rem;
+}
+.cart-product-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.cart-price {
+  font-weight: 500;
+}
+.cart-quantity {
+  border: 1px solid black;
+  outline-color: black;
+  width: 2.4rem;
+  text-align: center;
+  font-size: 1rem;
+}
+.cart-remove {
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+}
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  border-top: 1px solid black;
+}
+.total-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+.total-price {
+  margin-left: 0.5rem;
+  font-size: 1.75rem;
+}
+
+.total .mora{
+	height: 100%;
+	width: 8%;
+	object-fit: contain;
+}
+
+.btn-buy {
+  display: inline-block;
+  border-radius: 5rem;
+  background: var(--pink);
+  color: white;
+  padding: .9rem 3.5rem;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-decoration: none;
+}
+.btn-buy:hover {
+  text-decoration: underline;
+}
+#close-cart {
+  position: absolute;
+  top: 1rem;
+  right: 0.8rem;
+  font-size: 2rem;
+  color: black;
+  cursor: pointer;
+}
+
+.header form .cart .details .box{
+	padding: 1rem;
+	font-size: 1.7rem;
+	color: #333;
+	text-transform: none;
+	border: .1rem solid rgba(0, 0, 0, .1);
+	border-radius: .5rem ;
+	margin:  .7rem 0;
+	width: 100%;
+}
+
+.header form .cart .details .box:focus{
+	border-color: var(--pink);
+}
+

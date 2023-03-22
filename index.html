@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Paimon's Delicacies</title>
+    <link rel="icon" href="./images/paimon.webp">
+
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- css file: style-->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- js file-->
+    <script defer src="./foodshop.js"></script>
+
+
+
+    <!-- bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google api font -->
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Baloo+2">
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lilita+One">
+
+  </head>
+
+<body>
+    <!-- navbar -->
+    <header>
+        <img src ="./images/paimon.webp" alt="" class="logo">
+        <a href="#" class="logo-name">PAIMON'S DELICACIES</a>
+        <nav class="navbar navbar-expand-lg ">
+          <div class="container-fluid p-0">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item me-2">
+                  <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#food" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Food
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#mondstadt">Mondstadt</a></li>
+                            <li><a class="dropdown-item" href="#liyue">Liyue</a></li>
+                            <li><a class="dropdown-item" href="#inazuma">Inazuma</a></li>
+                            <li><a class="dropdown-item" href="#sumeru">Sumeru</a></li>
+                          </ul>
+                        </li>
+                <!--<li class="nav-item me-2">
+                  <a class="nav-link" href="#reviews">Reviews</a>
+                </li>-->
+                <li class="nav-item me-2">
+                  <a class="nav-link" href="#contact">Contact</a>
+                </li>
+              </ul>
+              
+            </div>
+          </div>
+        </nav>
+              <div class="icons">
+                <a href="#" class="" onclick="return false;"><i class="fa-solid fa-cart-shopping" id ="cart-icon"></i></a>
+                <!--<a href="#" class=""><i class="fa-solid fa-user" id ="user-icon"></i></a>-->
+              </div>
+              <!--<form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+              </form>-->  
+
+                <form method="post" action="foodshoporder">
+                <div class="cart">
+                  <h2 class="cart-title">Your Cart</h2>
+
+                  
+                  <!-- Content -->
+                  <fieldset class="cart-content">
+                    
+                  </fieldset> 
+
+                  
+                  <!-- Total -->
+                  <div class="total">
+                      <div class="total-title">Total:</div>
+                      <div class="total-price">0</div><img src="./images/mora.webp" class="mora">
+                  </div>
+                  <!-- Customer Details-->
+                  <h4 class="notif">Please input your details before ordering:</h4>
+                  
+                    
+                    <input type="text" name="name" placeholder="Name" class="box">
+                    <input type="text" name="email" placeholder="Email" class="box">
+                    <input type="text" name="phone" placeholder="Phone Number" class="box">
+                  
+                  
+                  
+                  <!-- Buy Button -->
+                  <input type="submit" value="Buy now" class="btn-buy" onclick="showAlert()"> 
+
+                                 
+                  <!-- Cart Close -->
+                  <i class="fa-solid fa-xmark" id="close-cart"></i>
+
+                </div> 
+                </form> 
+                      
+    </header>
+
+    <!-- home section -->
+    <section class="home" id="home">
+      <div class="content">
+        <h3>FRESHLY PREPARED</h3>
+        <span>Delivers to anywhere <br>in Teyvat</br></span>
+        <p>Learnt recipes from famous chefs all around Teyvat, prepared lovingly by the Traveller. Approved by many notable people around Teyvat.</p>
+        <a href="#food" class="order-btn">Order now</a>
+      </div>
+    </section>
+
+    <!-- about section-->
+    <section class="about" id="about">
+      <h1 class="heading">About us </h1>
+
+      <div class="row">
+
+        <div class="video-container">
+          <img src="images/aboutus.gif" loop autoplay></img>
+        </div>
+
+        <div class="content">
+          <h3>Our Beginnings</h3>
+          <p>The famous Traveller began their cooking journey when they were stranded in Teyvat and needed to be self-sufficient. After saving Paimon, the Traveller began travelling all over Teyvat in search for their sibling.
+          <br>In the process, the Traveller obtained many recipes from prominent chefs in Teyvat, including Chef Mao and Xiangling from Wanmin Restaurant, Brook from Mondstadt, Shimura Kanbei from Shimura's, Lambad from Lambad's Tavern and many more! </br></p>
+        </div>
+      </div>
+    </section>
+    <!-- about section ends -->
+    <!-- food section starts -->
+    <section class="food" id="food">
+
+      <h1 class="heading">Our Delicacies</h1>
+
+      <section class="mondstadt" id="mondstadt">
+        <h2 class="heading">Mondstadt Delicacies</h2>
+        
+        <div class="row">
+          <div class="card" style="width: 23rem;">
+            <img src="./images/Item_Delicious_Mushroom_Pizza.webp" class="product-img" alt="...">
+            <div class="card-body">
+              <h5 class="product-title">Mushroom Pizza</h5>
+              <p class="card-text">A pizza covered in cheese and mushrooms. It's a party in your mouth and the cheese and mushrooms invited all their delicious friends.</p>
+            </div>
+            <p class="price">Price: 6075 <img src="./images/mora.webp" class="mora"> </p>
+            <a type="button" class="add-cart">Add to Cart</a>
+
+          </div>
+
+          <div class="card" style="width: 23rem;">
+            <img src="./images/Item_Delicious_Barbatos_Ratatouille.webp" class="product-img" alt="...">
+            <div class="card-body">
+              <h5 class="product-title">Barbatos Ratatouille</h5>
+              <p class="card-text">A simple chowder with a long history. After much careful stewing, the flavors of three different vegetables have been blended to perfection. Like this, it is not hard to imagine why someone once called it "the best chowder I've ever tasted."</p>
+            </div>
+            <p class="price">Price: 7050 <img src="./images/mora.webp" class="mora"> </p>
+            <a type="button" class="add-cart">Add to Cart</a>
+          </div>
+
+          <div class="card" style="width: 23rem;">
+            <img src="./images/Item_Delicious_Sweet_Madame.webp" class="product-img" alt="...">
+            <div class="card-body">
+              <h5 class="product-title">Sweet Madame</h5>
+              <p class="card-text">Honey-roasted fowl. Tender and sweet, the meat has perfectly fused with the honey, ensuring the only thing left of this dish will be the cleanly-picked bones.</p>
+            </div>
+            <p class="price">Price: 1600 <img src="./images/mora.webp" class="mora"> </p>
+            <a type="button" class="add-cart">Add to Cart</a>
+          </div>
+
+          <div class="card" style="width: 23rem;">
+            <img src="./images/Item_Delicious_Pile_Em_Up.webp" class="product-img" alt="...">
+            <div class="card-body">
+              <h5 class="product-title">Pile Em Up</h5>
+              <p class="card-text">A rich, meaty dish. Piled in just the right way to be both aesthetically pleasing and delicious all the way through. I wonder if we can pile it a little higher...</p>
+            </div>
+            <p class="price">Price: 6650 <img src="./images/mora.webp" class="mora"> </p>
+            <a type="button" class="add-cart">Add to Cart</a>
+          </div>
+
+        </div>
+
+
+
+      </section>
+
+      <section class="liyue" id="liyue">
+        <h2 class="heading">Liyue Delicacies</h2>
+
+        <div class="row">
+          <div class="card" style="width: 23rem;">
+            <img src="./images/Item_Delicious_Jade_Parcels.webp" class="product-img" alt="...">
+            <div class="card-body">
+              <h5 class="product-title">Jade Parcels</h5>
+              <p class="card-text">An exquisite-looking dish. The ham's sweetness is locked inside the fresh vegetables, drizzled with a spicy broth. Delicious is an understatement.</p>
+            </div>
+            <p class="price">Price: 10000 <img src="./images/mora.webp" class="mora"> </p>
+            <a type="button" class="add-cart">Add to Cart</a>
+          </div>
+
+          <div class="card" style="width: 23rem;">
+            <img src="./images/Item_Delicious_Tianshu_Meat.webp" class="product-img" alt="...">
+            <div class="card-body">
+              <h5 class="product-title">Tianshu Meat</h5>
+              <p class="card-text">A braised meat dish. Its intense aroma can be detected from miles away. The ingredients look exquisite in every way, capturing the essence of its original design. It would not look out of place on a gourmet spread at Yuehai Pavilion.</p>
+            </div>
+            <p class="price">Price: 12000 <img src="./images/mora.webp" class="mora"> </p>
+            <a type="button" class="add-cart">Add to Cart</a>
+          </div>
+
+          <div class="card" style="width: 23rem;">
+            <img src="./images/Item_Delicious_Jewelry_Soup.webp" class="product-img" alt="...">
+            <div class="card-body">
+              <h5 class="product-title">Jewelry Soup</h5>
+              <p class="card-text">A simple vegetable soup. The mild-tasting soup is filled with the fragrance of fresh vegetables. This down-to-earth and heart-warming soup can rival any luxurious dish.</p>
+            </div>
+            <p class="price">Price: 1775 <img src="./images/mora.webp" class="mora"> </p>
+            <a type="button" class="add-cart">Add to Cart</a>
+          </div>
+
+          <div class="card" style="width: 23rem;">
+            <img src="./images/Item_Delicious_Lotus_Flower_Crisp.webp" class="product-img" alt="...">
+            <div class="card-body">
+              <h5 class="product-title">Lotus Flower Crisp</h5>
+              <p class="card-text">One of Liyue's traditional snacks. The flower petals waver to life if you gently blow on them. As you close your eyes and take a bite, a luscious flavor covers your tastebuds like a sweet harmony of blooming flowers and fluttering birds in the breeze.</p>
+            </div>
+            <p class="price">Price: 3650 <img src="./images/mora.webp" class="mora"> </p>
+            <a type="button" class="add-cart">Add to Cart</a>
+          </div>
+
+        </div>
+
+
+      </section>
+
+      <section class="inazuma" id="inazuma">
+        <h2 class="heading">Inazuma Delicacies</h2>
+
+        <div class="row">
+          <div class="card" style="width: 23rem;">
+            <img src="./images/Item_Delicious_Tricolor_Dango.webp" class="product-img" alt="...">
+            <div class="card-body">
+              <h5 class="product-title">Tricolor Dango</h5>
+              <p class="card-text">A soft, glutinous snack. The luster of these dango is like the falling morning dew, and it gives off the feeling of lush flowers and branches. When watching the flowers, the snack gives one a sense of happiness, as if the whole following year shall be as gorgeous as the falling flowers before them.</p>
+            </div>
+            <p class="price">Price: 3000 <img src="./images/mora.webp" class="mora"> </p>
+            <a type="button" class="add-cart">Add to Cart</a>
+          </div>
+
+          <div class="card" style="width: 23rem;">
+            <img src="./images/Item_Delicious_Butter_Crab.webp" class="product-img" alt="...">
+            <div class="card-body">
+              <h5 class="product-title">Butter Crab</h5>
+              <p class="card-text">A grilled crab dish. The butter-infused crab legs have a rich aroma that washes over the taste buds so seductively that before you know it, you've eaten it all, and are left sipping at the dregs of butter in the crab's shell, hoping to recapture a fragment of the dish's beauty.</p>
+            </div>
+            <p class="price">Price: 18500 <img src="./images/mora.webp" class="mora"> </p>
+            <a type="button" class="add-cart">Add to Cart</a>
+          </div>
+
+          <div class="card" style="width: 23rem;">
+            <img src="./images/Item_Delicious_Tonkotsu_Ramen.webp" class="product-img" alt="...">
+            <div class="card-body">
+              <h5 class="product-title">Tonkotsu Ramen</h5>
+              <p class="card-text">A steaming-hot noodle dish. The springy noodles have absorbed the essence of the soup, and the accoutrements have added all manner of variation to the mouthfeel. The soup has preserved the strong fragrance of the bones used to make it, yet goes down gently without that greasy feeling. Before you know it, the bowl's all gone, and you've still got room for more.</p>
+            </div>
+            <p class="price">Price: 9000 <img src="./images/mora.webp" class="mora"> </p>
+            <a type="button" class="add-cart">Add to Cart</a>
+          </div>
+
+          <div class="card" style="width: 23rem;">
+            <img src="./images/Item_Delicious_Sakura_Tempura.webp" class="product-img" alt="...">
+            <div class="card-body">
+              <h5 class="product-title">Sakura Tempura</h5>
+              <p class="card-text">A dish deep-fried in oil. The batter is thin and sheer, like a set of luxurious clothes over the ingredients. The outside crispness and freshness within form amazing layers of texture, leading those who eat it to marvel at just how this delicacy was created.</p>
+            </div>
+            <p class="price">Price: 7450 <img src="./images/mora.webp" class="mora"> </p>
+           <a type="button" class="add-cart">Add to Cart</a>
+          </div>
+
+        </div>
+
+
+      </section>
+
+      <section class="sumeru" id="sumeru">
+        <h2 class="heading">Sumeru Delicacies</h2>
+
+        <div class="row">
+          <div class="card" style="width: 23rem;">
+            <img src="./images/Item_Delicious_Potato_Boat.webp" class="product-img" alt="...">
+            <div class="card-body">
+              <h5 class="product-title">Potato Boat</h5>
+              <p class="card-text">A baked appetizer. The oozing cheese flows forth like a golden river, carrying an alluring aroma into your mouth. Soon, you will be amazed by the freshness of the Rukkhashava Mushrooms and the softness of the potato. You can’t help but wish that this leisurely and savory tour might last a little longer…</p>
+            </div>
+            <p class="price">Price: 7125 <img src="./images/mora.webp" class="mora"> </p>
+          <a type="button" class="add-cart">Add to Cart</a>
+          </div>
+
+          <div class="card" style="width: 23rem;">
+            <img src="./images/Item_Delicious_Selva_Salad.webp" class="product-img" alt="...">
+            <div class="card-body">
+              <h5 class="product-title">Selva Salad</h5>
+              <p class="card-text">An Aranara-style salad that Paimon drained her brain juice dry to improve. It is, in fact, a rather traditional recipe in Sumeru. Crispy and juicy Zaytun Peaches are served with fresh mints and blooming roses. This delicacy tastes refreshingly sweet and feels pleasantly cool on the tongue — this must be "the Taste of Happiness," as Aranara say.</p>
+            </div>
+            <p class="price">Price: 1800 <img src="./images/mora.webp" class="mora"> </p>
+          <a type="button" class="add-cart">Add to Cart</a>
+          </div>
+
+          <div class="card" style="width: 23rem;">
+            <img src="./images/Item_Delicious_Shawarma_Wrap.webp" class="product-img" alt="...">
+            <div class="card-body">
+              <h5 class="product-title">Shawarma Wrap</h5>
+              <p class="card-text">A wrap filled with roasted meat. On the thin, soft flatbread lies the tender meat covered in a crispy exterior, and the flavor is enriched by spices and balanced by vegetables. A small mouthful is enough to please one's picky taste buds. Eat carefully, now! You don't want to miss out on a single drop of the juice.</p>
+            </div>
+            <p class="price">Price: 2150 <img src="./images/mora.webp" class="mora"> </p>
+          <a type="button" class="add-cart">Add to Cart</a>
+          </div>
+
+          <div class="card" style="width: 23rem;">
+            <img src="./images/Item_Delicious_Padisarah_Pudding.webp" class="product-img" alt="...">
+            <div class="card-body">
+              <h5 class="product-title">Padisarah Pudding</h5>
+              <p class="card-text">A popular dessert in Sumeru. The moment it enters your mouth, the springy mouthfeel makes you feel like you're wandering atop milk-flavored clouds. As you savor its flavors, the blended fragrance of Padisarah and Sumeru Rose fills the air. When you finally do reach that very last bite, it feels like something has been left unfinished. You cannot help but lick the back of your spoon, as if to savor the final sublime moments of enjoyment.</p>
+            </div>
+            <p class="price">Price: 6525 <img src="./images/mora.webp" class="mora"> </p>
+          <a type="button" class="add-cart">Add to Cart</a>
+          </div>
+
+        </div>
+      </section>
+       
+    </section>
+    <!-- food section ends-->
+
+    <!-- contact section starts-->
+    <section class="contact" id="contact">
+      
+      <h1 class="heading">Contact us</h1>
+
+      <div class="row">
+        
+        <form method="post" action="foodshopcontact">
+          <input type="text" name="name" placeholder="Name" class="box">
+          <input type="email" name="email" placeholder="Email" class="box">
+          <input type="number" name="number" placeholder="Number" class="box">
+          <textarea name="message" class="box" placeholder="Message" id="" cols="0" rows="10"></textarea>
+          <input type="submit" value="Send Message" class="btn">
+        </form>
+
+        <div class="image">
+          <img src="./images/contact.jpeg">
+        </div>
+
+      </div>
+
+    </section>
+    <!-- contact section ends-->
+
+    <!-- footer section starts-->
+    <section class="footer">
+      
+      <div class="box-container">
+        
+        <div class="credit">
+          Created by Low Pui Mun for 2022/2023 IM2073.
+        </div>
+      </div>
+    </section>
+    <!-- footer section ends-->
+
+    <!-- bootstrap JS link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+  </body>
+</html>
